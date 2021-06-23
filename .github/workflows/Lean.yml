@@ -85,6 +85,7 @@ jobs:
         chmod +x ./customize.sh && ./customize.sh
         cd openwrt 
         sed -i 's/192.168.1.1/192.168.2.254/g' package/base-files/files/bin/config_generate
+        sed -i 's/5.10/5.4/g' target/linux/x86/Makefile
         sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF./$1$1M3VWDiG$PPa3eox6LJ6TjFURYxFYx1/g' package/lean/default-settings/files/zzz-default-settings
         sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
         cp -f package/litte/commit/Leandiffconfig .config && make defconfig
