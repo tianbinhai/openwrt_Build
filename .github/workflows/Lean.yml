@@ -67,8 +67,6 @@ jobs:
         ./scripts/feeds install -a
         ./scripts/feeds update -a
         ./scripts/feeds install -a
-        ./scripts/feeds update -a
-        ./scripts/feeds install -a
         echo "src-git ssrp https://github.com/fw876/helloworld.git" >> ./feeds.conf.default
         echo 'src-git nas https://github.com/linkease/nas-packages.git;master' >> feeds.conf.default
         
