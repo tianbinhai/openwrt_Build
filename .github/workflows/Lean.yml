@@ -76,8 +76,8 @@ jobs:
       run: |
         git clone https://github.com/xiaorouji/openwrt-passwall package/passwall
         git clone https://tianbinhai:Weiping1988@github.com/tianbinhai/openwrt-Compile package/openwrt-Compile
-        git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
-        git clone https://github.com/kenzok8/luci-theme-ifit.git package/lean/luci-theme-ifit
+        git clone https://github.com/kenzok8/openwrt-packages package/openwrt-packages
+        git clone https://github.com/kenzok8/luci-theme-ifit package/lean/luci-theme-ifit
     - name: 自定义配置文件Lean
       env:
         CONFIG_FILE: 'Lean.config'
