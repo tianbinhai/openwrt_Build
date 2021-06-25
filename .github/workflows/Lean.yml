@@ -75,7 +75,7 @@ jobs:
       working-directory: ./openwrt
       run: |
         git clone https://github.com/xiaorouji/openwrt-passwall package/passwall
-        git clone https://github.com/tianbinhai/openwrt-Compile package/litte
+        git clone https://github.com/tianbinhai/openwrt-Compile package/openwrt-Compile
         git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
         git clone https://github.com/kenzok8/luci-theme-ifit.git package/lean/luci-theme-ifit
     - name: 自定义配置文件Lean
@@ -89,7 +89,7 @@ jobs:
         sed -i 's/5.10/5.4/g' target/linux/x86/Makefile
         sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF./$1$1M3VWDiG$PPa3eox6LJ6TjFURYxFYx1/g' package/lean/default-settings/files/zzz-default-settings
         sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
-        cp -f package/litte/x86.config .config && make defconfig
+        cp -f package/openwrt-Compile/x86.config .config && make defconfig
         ./scripts/feeds update -a
         ./scripts/feeds install -a
         
